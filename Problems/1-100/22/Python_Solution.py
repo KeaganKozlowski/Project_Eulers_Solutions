@@ -12,8 +12,9 @@ base_line = file.readline()
 names = base_line.split(",")
 #print(names[0][1])
 # Looking at the second element of each string as each string features "," even though it is already type string, so wasted words
-names_sorted = sorted(names,key= lambda x: x[1])
-#print(score("COLIN", 937))
+names_sorted = sorted(names)
+print(names_sorted.index('"COLIN"'))
+print(score("COLIN", 937))
 total = 0
 for i, e in enumerate(names_sorted):
     total += score(e, i)
